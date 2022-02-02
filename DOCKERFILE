@@ -1,0 +1,5 @@
+FROM drezael/ubuntu:20.04
+RUN apt install -y apache2
+ENV SERVERNAME='DefaultApache2Server'
+COPY ./scripts/startup_apache.sh /run/startup_apache.sh
+CMD /bin/bash /run/startup_apache.sh
